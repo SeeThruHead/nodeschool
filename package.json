@@ -1,0 +1,23 @@
+{
+  "name": "learnyounode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "FilteredLS.js",
+  "dependencies": {
+    "through2-map": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeeThruHead/nodeschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeeThruHead/nodeschool/issues"
+  },
+  "homepage": "https://github.com/SeeThruHead/nodeschool"
+}
