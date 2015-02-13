@@ -1,0 +1,11 @@
+var http = require('http'),
+  map = require('through2-map');
+
+var server = http.createServer(function(request, response) {
+  if (request.method == 'POST') {
+    request.pipe(map(function(data) {
+      return data.toString().toUpperCase();
+    })).pipe(response);
+  }
+});
+server.listen(process.argv[2]);
