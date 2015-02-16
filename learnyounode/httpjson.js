@@ -6,6 +6,7 @@ var server = http.createServer(function(req, res) {
     "/api/parsetime": parsetime,
     "/api/unixtime": unixtime
   };
+
   function parsetime(iso) {
     var date = new Date(iso);
     return {
@@ -14,6 +15,7 @@ var server = http.createServer(function(req, res) {
       second: date.getSeconds()
     }
   }
+
   function unixtime(iso) {
     var date = new Date(iso);
     return {
@@ -26,14 +28,16 @@ var server = http.createServer(function(req, res) {
   var route = reqUrl.pathname;
   var iso = reqUrl.query.iso;
   var resource = routes[route](iso);
-  
+
   if (resource) {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    });
     res.end(JSON.stringify(resource));
   } else {
     res.writehead(404);
     res.end();
   }
- 
+
 });
 server.listen(process.argv[2]);

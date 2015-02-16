@@ -6,7 +6,7 @@ module.exports = function filterFileNames(err, fileNames) {
     var ext = fileName.slice(fileName.length - filterExt.length - 1);
     // console.log(ext);
     return (ext === ('.' + filterExt));
-    
+
   });
   result.forEach(function(fileName) {
     console.log(fileName);

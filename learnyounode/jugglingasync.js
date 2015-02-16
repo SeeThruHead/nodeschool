@@ -2,7 +2,7 @@ var http = require('http');
 
 var urls = process.argv.slice(2);
 var count = 0;
-var strings = ['','',''];
+var strings = ['', '', ''];
 
 function getResponses(urls) {
   urls.forEach(function(url, index) {
